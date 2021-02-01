@@ -229,7 +229,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
         {
             return new Order.header()
             {
-                datePickup = DateTime.Now,
+                datePickup = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 15, 00, 00),
                 senderAddress = new Order.address()
                 {
                     code = _dpdSettings.AddressCode,
