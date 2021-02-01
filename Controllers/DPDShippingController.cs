@@ -102,7 +102,7 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
             //prepare available options
             model.AvailableServiceCodeTypes = ServiceCodeType.DPDOnlineExpress.ToSelectList(false).Select(item =>
             {
-                var serviceCode = _dpdService.GetUpsCode((ServiceCodeType)int.Parse(item.Value));
+                var serviceCode = _dpdService.GetDPDCode((ServiceCodeType)int.Parse(item.Value));
 
                 return new SelectListItem(
                     $"{item.Text?.TrimStart('_').Replace(" ", "")}",
@@ -112,7 +112,7 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
 
             model.AvailableServiceVariantTypes = ServiceVariantType.DD.ToSelectList(false).Select(item =>
             {
-                var serviceVariant = _dpdService.GetUpsCode((ServiceVariantType)int.Parse(item.Value));
+                var serviceVariant = _dpdService.GetDPDCode((ServiceVariantType)int.Parse(item.Value));
                 return new SelectListItem(
                     $"{item.Text?.TrimStart('_').Replace(" ", "")}",
                     serviceVariant,

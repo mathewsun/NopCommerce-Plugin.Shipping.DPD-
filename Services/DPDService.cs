@@ -90,12 +90,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
             return str.Substring(0, chars).ToUpper() + (str.Length > 1 ? str.Substring(chars) : "");
         }
 
-        /// <summary>
-        ///     Get UPS code of enum value
-        /// </summary>
-        /// <param name="enumValue">Enum value</param>
-        /// <returns>UPS code</returns>
-        public string GetUpsCode(Enum enumValue)
+        public string GetDPDCode(Enum enumValue)
         {
             return GetAttributeValue<DPDCodeAttribute>(enumValue)?.Code;
         }
@@ -288,7 +283,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
             return new Order.order()
             {
                 orderNumberInternal = currentOrder.Id.ToString(),
-                serviceCode = GetUpsCode((ServiceCodeType)Enum.Parse(typeof(ServiceCodeType), ToUpper(currentOrder.ShippingMethod.Split('(', ')')[1].Trim().ToLower().Replace(" ", ""), 4))),
+                serviceCode = GetDPDCode((ServiceCodeType)Enum.Parse(typeof(ServiceCodeType), ToUpper(currentOrder.ShippingMethod.Split('(', ')')[1].Trim().ToLower().Replace(" ", ""), 4))),
                 serviceVariant = isDDServiceVariantType ? "ДД" : "ДТ",
                 cargoNumPack = 1,
                 cargoWeight = 0.050,
