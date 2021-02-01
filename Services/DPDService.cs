@@ -369,7 +369,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
                         selfPickup = false,
                         selfDelivery = serviceVariantTypes[i] == "DT",
                         declaredValue = priceOfProducts,
-                        weight = weightOfProducts + 0.050
+                        weight = weightOfProducts
                     }).Result;
 
                     foreach (var service in serviceCosts.@return.ToList())
@@ -389,6 +389,10 @@ namespace Nop.Plugin.Shipping.DPD.Services
                 catch (NullReferenceException)
                 {
                     _notificationService.ErrorNotification("Price or Weight of products is null");
+                }
+                catch
+                {
+                    _notificationService.ErrorNotification("City not found");
                 }
             }
 
