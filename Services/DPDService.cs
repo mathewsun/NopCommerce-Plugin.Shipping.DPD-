@@ -18,6 +18,7 @@ using Nop.Plugin.Shipping.DPD.Models;
 using Nop.Services.Catalog;
 using Nop.Services.Common;
 using Nop.Services.Localization;
+using Nop.Services.Messages;
 using Nop.Services.Orders;
 using Nop.Services.Shipping;
 
@@ -32,6 +33,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
         private readonly Order.DPDOrderClient _dpdOrderClient;
         private readonly SandboxOrder.DPDOrderClient _dpdSandboxOrderClient;
         private readonly IOrderService _orderService;
+        private readonly INotificationService _notificationService;
         private readonly IAddressService _addressService;
         private readonly ILocalizationService _localizationService;
         private readonly IProductService _productService;
@@ -44,6 +46,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
         public DPDService(
             ILocalizationService localizationService,
             IOrderService orderService,
+            INotificationService notificationService,
             IWorkContext workContext,
             IShoppingCartService shoppingCartService,
             IStoreContext storeContext,
@@ -53,6 +56,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
             DPDSettings dpdSettings,
             IShippingService shippingService)
         {
+            _notificationService = notificationService;
             _dpdCalculator = new DPDCalculatorClient();
             _dpdGeography = new DPDGeography2Client();
             _dpdOrderClient = new Order.DPDOrderClient();
@@ -297,9 +301,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
 
         private async Task<string> GetCityByCityNameAsync(string cityName)
         {
-            var requestContent = new StringContent($"text={cityName}",
-                Encoding.UTF8, MimeTypes.ApplicationXWwwFormUrlencoded);
-            var cityReponse = await _httpClient.PostAsync("http://rentoolo.ru/api/AllCities", requestContent);
+            var cityReponse = await _httpClient.PostAsync("http://rentoolo.ru/api/AllCities?text=" + cityName, new StringContent(""));
             cityReponse.EnsureSuccessStatusCode();
             return await cityReponse.Content.ReadAsStringAsync();
         }
@@ -307,12 +309,13 @@ namespace Nop.Plugin.Shipping.DPD.Services
         {
             var response = new GetShippingOptionResponse();
 
-            /*
-            var cityDeliveryJson = GetCityByCityNameAsync(shippingOptionRequest.CityFrom).Result;
-            var cityDelivery = JsonConvert.DeserializeObject<Geography.city>(cityDeliveryJson);
-            var cityFromJson = GetCityByCityNameAsync(shippingOptionRequest.ShippingAddress.City).Result;
-            var cityFrom = JsonConvert.DeserializeObject<Geography.city>(cityFromJson);
-            */
+            
+            string cityDeliveryJson = GetCityByCityNameAsync(shippingOptionRequest.CityFrom).Result;
+            var cityDelivery = JsonConvert.DeserializeObject<List<Geography.city>>(cityDeliveryJson).FirstOrDefault();
+
+            string cityFromJson = GetCityByCityNameAsync(shippingOptionRequest.ShippingAddress.City).Result;
+            var cityFrom = JsonConvert.DeserializeObject<List<Geography.city>>(cityFromJson).FirstOrDefault();
+            
 
             var serviceVariantTypes = _dpdSettings
                 .ServiceVariantsOffered.Split(':')
@@ -325,72 +328,67 @@ namespace Nop.Plugin.Shipping.DPD.Services
                 .ToList();
 
             double priceOfProducts = 0;
+            double weightOfProducts = 0;
 
             foreach (var product in shippingOptionRequest.Items.Select(x => x.Product))
             {
+                weightOfProducts += (double)product.Weight;
                 priceOfProducts += (double)product.Price;
             }
 
-            var cities = _dpdGeography.getCitiesCashPayAsync(new dpdCitiesCashPayRequest()
-            {
-                auth = new Geography.auth()
-                {
-                    clientKey = _dpdSettings.ClientKey,
-                    clientNumber = _dpdSettings.ClientNumber
-                }
-            }).Result;
-
-            var cityFrom = cities.@return.FirstOrDefault(x => x.cityName == shippingOptionRequest.CityFrom);
-            var cityDelivery = cities.@return.FirstOrDefault(x => x.cityName == shippingOptionRequest.ShippingAddress.City);
-
             for (int i = 0; i < serviceVariantTypes.Count; i++)
             {
-                var serviceCosts = _dpdCalculator.getServiceCost2Async(new serviceCostRequest()
+                try
                 {
-                    auth = new Calculator.auth()
+                    var serviceCosts = _dpdCalculator.getServiceCost2Async(new serviceCostRequest()
                     {
-                        clientKey = _dpdSettings.ClientKey,
-                        clientNumber = _dpdSettings.ClientNumber
-                    },
-
-                    delivery = new cityRequest()
-                    {
-                        cityId = cityFrom.cityId,
-                        countryCode = cityFrom.countryCode,
-                        cityName = cityFrom.cityName,
-                        regionCode = cityFrom.regionCode,
-                        cityIdSpecified = true,
-                        index = shippingOptionRequest.ShippingAddress.ZipPostalCode,
-                        regionCodeSpecified = true,
-                    },
-                    pickup = new cityRequest()
-                    {
-                        cityId = cityDelivery.cityId,
-                        countryCode = cityDelivery.countryCode,
-                        cityName = cityDelivery.cityName,
-                        cityIdSpecified = true,
-                        regionCodeSpecified = true,
-                        index = shippingOptionRequest.ZipPostalCodeFrom,
-                        regionCode = cityDelivery.regionCode,
-                    },
-                    selfPickup = false,
-                    selfDelivery = serviceVariantTypes[i] == "DT",
-                    declaredValue = priceOfProducts,
-                    weight = 0.050
-                }).Result;
-
-                foreach (var service in serviceCosts.@return.ToList())
-                {
-                    if (serviceCodeTypes.Any(x => x.ToLower() == service.serviceName.Replace(" ", "").ToLower()))
-                    {
-                        response.ShippingOptions.Add(new ShippingOption()
+                        auth = new Calculator.auth()
                         {
-                            Name = (serviceVariantTypes[i] == "DT" ? "DPD Pick-up delivery" : "DPD Courier delivery") + $" ({service.serviceName})",
-                            Rate = (decimal)service.cost,
-                            TransitDays = service.days,
-                            ShippingRateComputationMethodSystemName = "DPD-" + serviceVariantTypes[i]
-                        });
+                            clientKey = _dpdSettings.ClientKey,
+                            clientNumber = _dpdSettings.ClientNumber
+                        },
+
+                        delivery = new cityRequest()
+                        {
+                            cityId = cityFrom.cityId,
+                            countryCode = cityFrom.countryCode,
+                            cityName = cityFrom.cityName,
+                            regionCode = cityFrom.regionCode,
+                            cityIdSpecified = true,
+                            regionCodeSpecified = true,
+                        },
+                        pickup = new cityRequest()
+                        {
+                            cityId = cityDelivery.cityId,
+                            countryCode = cityDelivery.countryCode,
+                            cityName = cityDelivery.cityName,
+                            cityIdSpecified = true,
+                            regionCodeSpecified = true,
+                            regionCode = cityDelivery.regionCode,
+                        },
+                        selfPickup = false,
+                        selfDelivery = serviceVariantTypes[i] == "DT",
+                        declaredValue = priceOfProducts,
+                        weight = weightOfProducts + 0.050
+                    }).Result;
+
+                    foreach (var service in serviceCosts.@return.ToList())
+                    {
+                        if (serviceCodeTypes.Any(x => x.ToLower() == service.serviceName.Replace(" ", "").ToLower()))
+                        {
+                            response.ShippingOptions.Add(new ShippingOption()
+                            {
+                                Name = (serviceVariantTypes[i] == "DT" ? "DPD Pick-up delivery" : "DPD Courier delivery") + $" ({service.serviceName})",
+                                Rate = (decimal)service.cost,
+                                TransitDays = service.days,
+                                ShippingRateComputationMethodSystemName = "DPD-" + serviceVariantTypes[i]
+                            });
+                        }
                     }
+                } 
+                catch (NullReferenceException)
+                {
+                    _notificationService.ErrorNotification("Price or Weight of products is null");
                 }
             }
 
