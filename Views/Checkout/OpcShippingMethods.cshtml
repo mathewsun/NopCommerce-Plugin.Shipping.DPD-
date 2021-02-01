@@ -10,31 +10,11 @@
 <div class="checkout-data">
 
     <script asp-location="Footer">
-        $(document).ready(function () {
-            $(".method-list").children().each(function (index) {
-                $("#shippingoption_" + index).change(function () {
-                    $("#pickup-terminal-code").val(null);
-                    $("#pickup-country-name").val(null);
-                    $("#pickup-city").val(null);
-                    $("#pickup-house").val(null);
-                    $("#pickup-street").val(null);
-                });
-            });
-            $("#shippingoption_dpdDD-input").change(function () {
-                $("#pickup-terminal-code").val(null);
-                $("#pickup-country-name").val(null);
-                $("#pickup-city").val(null);
-                $("#pickup-street").val(null);
-                $("#pickup-house").val(null);
-            });
-
-        });
-
         var chooser = new DPDChooser('dpdchooser',
             {
                 type: 'dpdclient', // Обязательный параметр
                 //Геопозиция:
-                address: 'Москва', //Адрес (Можно передавать сокращенно – только город, а можно с учетом страны, города, улицы)
+                address: '@Html.Raw(Model.City)', //Адрес (Можно передавать сокращенно – только город, а можно с учетом страны, города, улицы)
                 viewdistance: 55, // Радиус отображения пунктов в километрах вокруг указанного адреса
                 //Фильтры:
                 filter_wait: 0, // Ожидание на адресе доставки
@@ -72,7 +52,25 @@
             $("#pickup-house").val(null);
         });
 
+        $(document).ready(function () {
+            $(".method-list").children().each(function (index) {
+                $("#shippingoption_" + index).change(function () {
+                    $("#pickup-terminal-code").val(null);
+                    $("#pickup-country-name").val(null);
+                    $("#pickup-city").val(null);
+                    $("#pickup-house").val(null);
+                    $("#pickup-street").val(null);
+                });
+            });
+            $("#shippingoption_dpdDD-input").change(function () {
+                $("#pickup-terminal-code").val(null);
+                $("#pickup-country-name").val(null);
+                $("#pickup-city").val(null);
+                $("#pickup-street").val(null);
+                $("#pickup-house").val(null);
+            });
 
+        });
     </script>
 
     <script asp-location="Footer">

@@ -201,6 +201,8 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
 
             var onePageModel = _checkoutModelFactory.PrepareOnePageCheckoutModel(cart);
 
+            var address = _addressService.GetAddressById(_workContext.CurrentCustomer.ShippingAddressId.GetValueOrDefault());            
+
             DPDCheckoutShippingMethodModel dpdShippingMethodModel = new DPDCheckoutShippingMethodModel()
             {
                 CustomProperties = shippingMethodModel.CustomProperties,
@@ -210,6 +212,7 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                 ShippingMethods = shippingMethodModel.ShippingMethods,
                 Warnings = shippingMethodModel.Warnings,
                 OnePageModel = onePageModel,
+                City = address.City
             };
 
             dpdShippingMethodModel.OnePageModel.BillingAddress.NewAddressPreselected = false;

@@ -9,5 +9,6 @@ namespace Nop.Plugin.Shipping.DPD.Models
     public class DPDCheckoutShippingMethodModel : CheckoutShippingMethodModel
     {
         public OnePageCheckoutModel OnePageModel { get; set; }
+        public string City { get; set; }
     }
 }
