@@ -43,7 +43,7 @@
                 availableServiceCodes[i] = availableServiceCodes[i].replace('[', '').replace(']', '');
                 availableServiceCodes[i] = availableServiceCodes[i].substring(0, 3) + " " + availableServiceCodes[i].substring(3, availableServiceCodes[i].length).toUpperCase();
             }
-                
+
             var data = {
                 "ClientKey": '@Html.Raw(Model.ClientKey)',
                 "ClientNumber": @Html.Raw(Model.ClientNumber),
@@ -52,11 +52,11 @@
                 "SelfPickup": false,
                 "SelfDelivery": true,
                 "DeclaredValue": @Html.Raw(Model.ProductCost),
-                "Weight": 0.050
+                "Weight": @Html.Raw(Model.ProductWeight)
             };
 
-            $.post("http://localhost:53222/api/DPDCitiesDeliveryCost", data, function (result, status)
-            {   
+            $.post("https://www.rentoolo.ru/api/DPDCitiesDeliveryCost", data, function (result, status)
+            {
                 var select = document.getElementById("dpd-dt-services-select");
 
                 var length = select.options.length;
