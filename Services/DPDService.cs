@@ -100,6 +100,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
         }
         public object CreateNewAddress(DPDShippingModel newAddressModel)
         {
+            
             try
             {
                 var response = _dpdOrderClient.createAddressAsync(new Order.dpdClientAddress()
@@ -281,7 +282,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
             var currentOrder = _orderService.GetOrderById(orderId);
 
             bool isDDServiceVariantType = new string(currentOrder.ShippingRateComputationMethodSystemName.Reverse().Take(2).Reverse().ToArray()) == "DD" ? true : false;
-
+           
             var receiverAddress = PrepareReceiverAdress(currentOrder, isDDServiceVariantType, dpdPickupPointAddress);
 
             return new Order.order()
@@ -290,9 +291,9 @@ namespace Nop.Plugin.Shipping.DPD.Services
                 serviceCode = GetDPDCode((ServiceCodeType)Enum.Parse(typeof(ServiceCodeType), ToUpper(currentOrder.ShippingMethod.Split('(', ')')[1].Trim().ToLower().Replace(" ", ""), 4))),
                 serviceVariant = isDDServiceVariantType ? "ДД" : "ДТ",
                 cargoNumPack = 1,
-                cargoWeight = 0.050,
+                cargoWeight = dpdPickupPointAddress.CartItemsWeight,
                 cargoRegistered = _dpdSettings.CargoRegistered,
-                cargoValue = 50000,
+                cargoValue = dpdPickupPointAddress.CartItemsCost,
                 cargoValueSpecified = true,
                 cargoCategory = dpdPickupPointAddress.Category,
                 receiverAddress = receiverAddress
@@ -352,24 +353,18 @@ namespace Nop.Plugin.Shipping.DPD.Services
                         {
                             cityId = cityFrom.cityId,
                             countryCode = cityFrom.countryCode,
-                            cityName = cityFrom.cityName,
-                            regionCode = cityFrom.regionCode,
                             cityIdSpecified = true,
-                            regionCodeSpecified = true,
                         },
                         pickup = new cityRequest()
                         {
                             cityId = cityDelivery.cityId,
                             countryCode = cityDelivery.countryCode,
-                            cityName = cityDelivery.cityName,
                             cityIdSpecified = true,
-                            regionCodeSpecified = true,
-                            regionCode = cityDelivery.regionCode,
                         },
                         selfPickup = false,
                         selfDelivery = serviceVariantTypes[i] == "DT",
                         declaredValue = priceOfProducts,
-                        weight = weightOfProducts
+                        weight = weightOfProducts + 0.050
                     }).Result;
 
                     foreach (var service in serviceCosts.@return.ToList())

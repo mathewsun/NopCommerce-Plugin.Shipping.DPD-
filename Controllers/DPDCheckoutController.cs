@@ -201,6 +201,17 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
 
             var onePageModel = _checkoutModelFactory.PrepareOnePageCheckoutModel(cart);
 
+            double weight = 0;
+            double cost = 0;
+
+            foreach(var item in cart)
+            {
+                var product = _productService.GetProductById(item.ProductId);
+
+                weight += (double)product.Weight;
+                cost += (double)product.Price;
+            }
+
             var address = _addressService.GetAddressById(_workContext.CurrentCustomer.ShippingAddressId.GetValueOrDefault());            
 
             DPDCheckoutShippingMethodModel dpdShippingMethodModel = new DPDCheckoutShippingMethodModel()
@@ -212,7 +223,13 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                 ShippingMethods = shippingMethodModel.ShippingMethods,
                 Warnings = shippingMethodModel.Warnings,
                 OnePageModel = onePageModel,
-                City = address.City
+                SenderCity = _dpdSettings.SenderCity,
+                DeliveryCity = address.City,
+                ClientKey = _dpdSettings.ClientKey,
+                ClientNumber = _dpdSettings.ClientNumber,
+                ProductWeight = weight,
+                ProductCost = cost,
+                JsonAvailableServiceCodes = _dpdSettings.ServiceCodesOffered
             };
 
             dpdShippingMethodModel.OnePageModel.BillingAddress.NewAddressPreselected = false;

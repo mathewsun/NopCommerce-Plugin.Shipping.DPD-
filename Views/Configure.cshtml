@@ -57,17 +57,26 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-3">
+                        <nop-label asp-for="SenderCity" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SenderCity" />
+                        <span asp-validation-for="SenderCity"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
                         <nop-label asp-for="AddressCode" />
                     </div>
                     <div class="col-md-9">
-                        <nop-editor asp-for="AddressCode"/>
+                        <nop-editor asp-for="AddressCode" />
                         <span asp-validation-for="AddressCode"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-3">
                         <input style="margin-top:10px" type="hidden" name="IsCreateNewAddressSelected" value="@false" id="dpd-address-hidden-input" />
-                        
+
                     </div>
                     <div class="col-md-9" id="dpd-address-label">
                         <label>Click for create new dpd address</label>
@@ -79,7 +88,7 @@
                             <nop-label asp-for="Code" />
                         </div>
                         <div class="col-md-9">
-                            <nop-editor asp-for="Code"/>
+                            <nop-editor asp-for="Code" />
                             <span asp-validation-for="Code" id="dpd-code-input"></span>
                         </div>
                     </div>

@@ -68,7 +68,8 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                 ClientKey = _dpdSettings.ClientKey,
                 CargoRegistered = _dpdSettings.CargoRegistered,
                 UseSandbox = _dpdSettings.UseSandbox,
-                AddressCode = _dpdSettings.AddressCode
+                AddressCode = _dpdSettings.AddressCode,
+                SenderCity = _dpdSettings.SenderCity
             };
 
             List<string> serviceCodes = new List<string>();
@@ -156,9 +157,10 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                 !string.IsNullOrEmpty(model.ContactPhone))
                 {
                     var response = (Order.createAddressResponse)_dpdService.CreateNewAddress(model);
-
+                    
                     if (string.IsNullOrEmpty(response.@return.errorMessage))
                     {
+                        _dpdSettings.SenderCity = model.City;
                         _dpdSettings.AddressCode = response.@return.code;
                     }
                     else
@@ -173,6 +175,15 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
             }
             else
             {
+                if (string.IsNullOrEmpty(model.SenderCity))
+                {
+                    errors.Add("Sender city can't be null");
+                }
+                else
+                {
+                    _dpdSettings.SenderCity = model.SenderCity;
+                }
+
                 if (string.IsNullOrEmpty(model.AddressCode))
                 {
                     errors.Add("Please fill the address code input");

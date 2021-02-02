@@ -14,7 +14,7 @@
             {
                 type: 'dpdclient', // Обязательный параметр
                 //Геопозиция:
-                address: '@Html.Raw(Model.City)', //Адрес (Можно передавать сокращенно – только город, а можно с учетом страны, города, улицы)
+                address: '@Html.Raw(Model.DeliveryCity)', //Адрес (Можно передавать сокращенно – только город, а можно с учетом страны, города, улицы)
                 viewdistance: 55, // Радиус отображения пунктов в километрах вокруг указанного адреса
                 //Фильтры:
                 filter_wait: 0, // Ожидание на адресе доставки
@@ -36,7 +36,54 @@
 
         chooser.onChoose(function (dep) {
             pickupAddress = dep;
-            console.log(dep);
+
+            var availableServiceCodes = '@Html.Raw(Model.JsonAvailableServiceCodes)'.split(':');
+
+            for (var i = 0; i < availableServiceCodes.length; i++) {
+                availableServiceCodes[i] = availableServiceCodes[i].replace('[', '').replace(']', '');
+                availableServiceCodes[i] = availableServiceCodes[i].substring(0, 3) + " " + availableServiceCodes[i].substring(3, availableServiceCodes[i].length).toUpperCase();
+            }
+                
+            var data = {
+                "ClientKey": '@Html.Raw(Model.ClientKey)',
+                "ClientNumber": @Html.Raw(Model.ClientNumber),
+                "DeliveryCityName": '@Html.Raw(Model.SenderCity)',
+                "PickupCityName": dep.cityName,
+                "SelfPickup": false,
+                "SelfDelivery": true,
+                "DeclaredValue": @Html.Raw(Model.ProductCost),
+                "Weight": 0.050
+            };
+
+            $.post("http://localhost:53222/api/DPDCitiesDeliveryCost", data, function (result, status)
+            {   
+                var select = document.getElementById("dpd-dt-services-select");
+
+                var length = select.options.length;
+                for (i = length - 1; i >= 0; i--) {
+                    select.options[i] = null;
+                }
+
+                var index = 0;
+
+                result.forEach(obj => {
+                    if (availableServiceCodes.includes(obj.serviceName)) {
+                        var opt = document.createElement("option");
+
+                        opt.id = "dpd-option-dt-" + index;
+                        opt.value = obj.serviceName + "___" + "DPD-DT";
+                        opt.text = "DPD Pick-up delivery (" + obj.serviceName + ") (" + obj.cost + " ₽ )";
+
+                        select.appendChild(opt);
+
+                        index = index + 1;
+                    }
+                });
+
+                $("#shippingoption_dpdDT-label").html($("#dpd-option-dd-1").html());
+                $("#shippingoption_dpdDT-input").val($("#dpd-option-dd-1").val());
+            });
+
             $("#pickup-terminal-code").val(dep.code);
             $("#pickup-country-name").val(dep.addressString.split(',')[1]);
             $("#pickup-city").val(dep.cityName);
@@ -102,7 +149,6 @@
             $("#dpd-dd-services-select").change(function () {
                 $("#dpd-dd-services-select").children().each(function (index) {
                     if ($("#dpd-option-dd-" + index).prop('selected') == true) {
-                        console.log(123);
                         $("#shippingoption_dpdDD-label").html($("#dpd-option-dd-" + index).html());
                         $("#shippingoption_dpdDD-input").val($("#dpd-option-dd-" + index).val());
                     }

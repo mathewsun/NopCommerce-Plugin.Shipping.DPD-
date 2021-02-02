@@ -58,7 +58,8 @@ namespace Nop.Plugin.Shipping.DPD.Models
         [Required]
         [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.ClientKey")]
         public string ClientKey { get; set; }
-
+        [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.SenderCity")]
+        public string SenderCity { get; set; }
         [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.UseSandbox")]
         public bool UseSandbox { get; set; }
         [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.AddressCode")]
@@ -71,5 +72,6 @@ namespace Nop.Plugin.Shipping.DPD.Models
         [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.AvailableServiceVariantTypes")]
         public IList<SelectListItem> AvailableServiceVariantTypes { get; set; }
         public IList<string> ServiceVariantTypes { get; set; }
+
     }
 }

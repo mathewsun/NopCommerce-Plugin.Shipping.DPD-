@@ -12,6 +12,7 @@ namespace Nop.Plugin.Shipping.DPD
         public bool UseSandbox { get; set; }
         public bool CargoRegistered { get; set; }
         public string AddressCode { get; set; }
+        public string SenderCity { get; set; }
         public string ServiceCodesOffered { get; set; }
         public string ServiceVariantsOffered { get; set; }
     }

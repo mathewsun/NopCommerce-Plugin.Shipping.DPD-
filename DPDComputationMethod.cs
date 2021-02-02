@@ -106,6 +106,8 @@ namespace Nop.Plugin.Shipping.DPD
                 ["Enums.Nop.Plugin.Shipping.DPD.PickupTimePeriodType.NineAMToOnePM"] = "9-13",
                 ["Enums.Nop.Plugin.Shipping.DPD.PickupTimePeriodType.OnePMToSixPM"] = "13-18",
 
+                ["Plugins.Shipping.DPD.Fields.SenderCity"] = "Sender city",
+
                 ["Plugins.Shipping.DPD.Fields.UseSandbox"] = "Use sandbox",
 
                 ["Plugins.Shipping.DPD.Fields.ClientNumber"] = "Client Number",
