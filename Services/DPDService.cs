@@ -314,7 +314,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
             string cityDeliveryJson = GetCityByCityNameAsync(shippingOptionRequest.CityFrom).Result;
             var cityDelivery = JsonConvert.DeserializeObject<List<Geography.city>>(cityDeliveryJson).FirstOrDefault();
 
-            string cityFromJson = GetCityByCityNameAsync(shippingOptionRequest.ShippingAddress.City).Result;
+            string cityFromJson = GetCityByCityNameAsync(_dpdSettings.SenderCity).Result;
             var cityFrom = JsonConvert.DeserializeObject<List<Geography.city>>(cityFromJson).FirstOrDefault();
             
 
@@ -348,7 +348,6 @@ namespace Nop.Plugin.Shipping.DPD.Services
                             clientKey = _dpdSettings.ClientKey,
                             clientNumber = _dpdSettings.ClientNumber
                         },
-
                         delivery = new cityRequest()
                         {
                             cityId = cityFrom.cityId,
@@ -364,7 +363,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
                         selfPickup = false,
                         selfDelivery = serviceVariantTypes[i] == "DT",
                         declaredValue = priceOfProducts,
-                        weight = weightOfProducts + 0.050
+                        weight = weightOfProducts
                     }).Result;
 
                     foreach (var service in serviceCosts.@return.ToList())
@@ -383,7 +382,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
                 } 
                 catch (NullReferenceException)
                 {
-                    _notificationService.ErrorNotification("Price or Weight of products is null");
+                    _notificationService.ErrorNotification("Price or Weight or SenderCity of products is null");
                 }
                 catch
                 {
