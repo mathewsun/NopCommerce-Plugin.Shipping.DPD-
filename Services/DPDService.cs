@@ -146,6 +146,8 @@ namespace Nop.Plugin.Shipping.DPD.Services
             var orderHeader = PrepareOrderHeader();
             var orderSettings = PrepareOrderSettings(orderId, dpdPickupPointAddress);
 
+            orderSettings.cargoWeight = orderSettings.cargoWeight <= 0 ? 1 : orderSettings.cargoWeight;
+
             if (_dpdSettings.UseSandbox)
             {
                 var orderResponse = _dpdSandboxOrderClient.createOrderAsync(new SandboxOrder.dpdOrdersData()
@@ -247,13 +249,19 @@ namespace Nop.Plugin.Shipping.DPD.Services
             string receiverFullName = shippingAddress.FirstName + " " + shippingAddress.LastName;
             if (isDDServiceVariantType)
             {
+                var cityJson = GetCityByCityNameAsync(shippingAddress.City).Result;
+                var city = JsonConvert.DeserializeObject<List<Geography.city>>(cityJson).FirstOrDefault();
+
                 receiverAddress = new Order.address()
                 {
                     name = receiverFullName,
-                    countryName = "Россия",
-                    city = shippingAddress.City,
-                    street = shippingAddress.Address1?.Split()[0] ?? throw new ArgumentNullException("Shipping street can be null"),
-                    house = shippingAddress.Address1?.Split()[1],
+                    countryName = city.countryName,
+                    index = shippingAddress.ZipPostalCode,
+                    city = city.cityName,
+                    streetAbbr = "ул",
+                    region = city.regionName + " .обл",
+                    addressString = shippingAddress.Address1,
+                    street = shippingAddress.Address1 ?? throw new ArgumentNullException("Shipping street can be null"),
                     contactFio = receiverFullName,
                     contactPhone = shippingAddress.PhoneNumber,
                     contactEmail = shippingAddress.Email
