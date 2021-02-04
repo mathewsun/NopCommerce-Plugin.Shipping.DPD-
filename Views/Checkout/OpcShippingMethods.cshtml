@@ -52,10 +52,9 @@
                 PickupCityName: dep.cityName,
                 SelfPickup: false,
                 SelfDelivery: true,
-                DeclaredValue: Number(@Html.Raw(Model.ProductCost)),
-                Weight: Number(@Html.Raw(Model.ProductWeight))
+                DeclaredValue: (@Html.Raw(Model.ProductCost)),
+                Weight: (@Html.Raw(Model.ProductWeight)) <= 0 ? 1 : (@Html.Raw(Model.ProductWeight))
             };
-
             $.post("https://www.rentoolo.ru/api/DPDCitiesDeliveryCost", data, function (result, status)
             {
                 var select = document.getElementById("dpd-dt-services-select");
