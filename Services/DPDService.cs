@@ -250,10 +250,10 @@ namespace Nop.Plugin.Shipping.DPD.Services
                 receiverAddress = new Order.address()
                 {
                     name = receiverFullName,
-                    countryName = shippingAddress.County,
-                    city = dpdPickupPointAddress.City,
-                    street = dpdPickupPointAddress.Street ?? throw new ArgumentNullException("Shipping street can be null"),
-                    house = dpdPickupPointAddress.House,
+                    countryName = "Россия",
+                    city = shippingAddress.City,
+                    street = shippingAddress.Address1?.Split()[0] ?? throw new ArgumentNullException("Shipping street can be null"),
+                    house = shippingAddress.Address1?.Split()[1],
                     contactFio = receiverFullName,
                     contactPhone = shippingAddress.PhoneNumber,
                     contactEmail = shippingAddress.Email
@@ -363,7 +363,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
                         selfPickup = false,
                         selfDelivery = serviceVariantTypes[i] == "DT",
                         declaredValue = priceOfProducts,
-                        weight = weightOfProducts
+                        weight = weightOfProducts <= 0 ? 1 : weightOfProducts   
                     }).Result;
 
                     foreach (var service in serviceCosts.@return.ToList())
