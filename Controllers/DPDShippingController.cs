@@ -69,7 +69,8 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                 CargoRegistered = _dpdSettings.CargoRegistered,
                 UseSandbox = _dpdSettings.UseSandbox,
                 AddressCode = _dpdSettings.AddressCode,
-                SenderCity = _dpdSettings.SenderCity
+                SenderCity = _dpdSettings.SenderCity,
+                CitiesApiUrl = _dpdSettings.CitiesApiUrl
             };
 
             List<string> serviceCodes = new List<string>();
@@ -140,6 +141,7 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
             _dpdSettings.UseSandbox = model.UseSandbox;
             _dpdSettings.CargoRegistered = model.CargoRegistered;
             _dpdSettings.AddressCode = model?.AddressCode;
+            _dpdSettings.CitiesApiUrl = model?.CitiesApiUrl;
 
             _dpdSettings.ServiceVariantsOffered =
                 string.Join(':', model.ServiceVariantTypes.Select(service => $"[{service}]"));

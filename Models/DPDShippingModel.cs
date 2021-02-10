@@ -18,6 +18,8 @@ namespace Nop.Plugin.Shipping.DPD.Models
         public bool IsCreateNewAddressSelected { get; set; }
         [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.Code")]
         public string Code { get; set; }
+        [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.CitiesApiUrl")]
+        public string CitiesApiUrl { get; set; }
         [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.Name")]
         public string Name { get; set; }
         [NopResourceDisplayName("Plugins.Shipping.DPD.Fields.CountryName")]

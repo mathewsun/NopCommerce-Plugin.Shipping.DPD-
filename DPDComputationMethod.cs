@@ -97,6 +97,7 @@ namespace Nop.Plugin.Shipping.DPD
                 CargoRegistered = false,
                 ServiceCodesOffered = "[NDY:CUR:CMS:PCL:ECN]",
                 ServiceVariantsOffered = "[TT:TD]",
+                CitiesApiUrl = @"http://web-api.online/api/Currencies?currencyOfMetal=USD&currencyOfValute=RUB"
             });
 
             //all locales
@@ -131,6 +132,9 @@ namespace Nop.Plugin.Shipping.DPD
 
                 ["Plugins.Shipping.DPD.Fields.AddressCode"] = "Address code",
                 ["Plugins.Shipping.DPD.Fields.AddressCode.Hint"] = "Address code in DPD",
+
+                ["Plugins.Shipping.DPD.Fields.CitiesApiUrl"] = "Cities API URL",
+                ["Plugins.Shipping.DPD.Fields.CitiesApiUrl.Hint"] = "URL api, to get a list of cities, then use it when searching for the city of the buyer and the sender.",
 
                 ["Plugins.Shipping.DPD.Fields.CargoRegistered"] = "Cargo registered",
                 ["Plugins.Shipping.DPD.Fields.CargoRegistered.Hint"] =
