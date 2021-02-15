@@ -310,7 +310,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
 
         private async Task<string> GetCityByCityNameAsync(string cityName)
         {
-            var cityReponse = await _httpClient.PostAsync("http://rentoolo.ru/api/AllCities?text=" + cityName, new StringContent(""));
+            var cityReponse = await _httpClient.PostAsync("http://web-api.online/api/AllCities?text=" + cityName, new StringContent(""));
             cityReponse.EnsureSuccessStatusCode();
             return await cityReponse.Content.ReadAsStringAsync();
         }
