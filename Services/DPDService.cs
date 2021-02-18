@@ -14,6 +14,7 @@ using Nop.Core.Domain.Orders;
 using Nop.Core.Domain.Shipping;
 using Nop.Data;
 using Nop.Plugin.Shipping.DPD.Domain;
+using Nop.Plugin.Shipping.DPD.Infrastructure;
 using Nop.Plugin.Shipping.DPD.Models;
 using Nop.Services.Catalog;
 using Nop.Services.Common;
@@ -310,7 +311,7 @@ namespace Nop.Plugin.Shipping.DPD.Services
 
         private async Task<string> GetCityByCityNameAsync(string cityName)
         {
-            var cityReponse = await _httpClient.PostAsync("http://web-api.online/api/AllCities?text=" + cityName, new StringContent(""));
+            var cityReponse = await _httpClient.PostAsync(_dpdSettings.CitiesApiUrl + cityName, new StringContent(""));
             cityReponse.EnsureSuccessStatusCode();
             return await cityReponse.Content.ReadAsStringAsync();
         }
