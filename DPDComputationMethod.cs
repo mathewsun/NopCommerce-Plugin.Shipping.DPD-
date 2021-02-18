@@ -96,8 +96,8 @@ namespace Nop.Plugin.Shipping.DPD
             {
                 UseSandbox = true,
                 CargoRegistered = false,
-                ServiceCodesOffered = "[NDY:CUR:CMS:PCL:ECN]",
-                ServiceVariantsOffered = "[TT:TD]",
+                ServiceCodesOffered = "[DPDExpress]:[DPDClassic]:[DPDOnlineExpress]:[DPDOptium]:[DPDEconomy]",
+                ServiceVariantsOffered = "[TT]:[TD]",
                 CitiesApiUrl = PluginDefaults.DefaultCitiesApiUrl
             });
 
