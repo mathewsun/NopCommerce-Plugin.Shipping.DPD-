@@ -12,6 +12,8 @@ namespace Nop.Plugin.Shipping.DPD.Infrastructure
         public static string ContentPath = $"{PluginBasePath}Content/";
         public static string ScriptsPath => $"{PluginBasePath}Content/scripts/";
         public static string StylesPath => $"{PluginBasePath}Content/Styles/";
-        
+        public static string DefaultCitiesApiUrl => "http://web-api.online/api/AllCities?text=";
+
+
     }
 }

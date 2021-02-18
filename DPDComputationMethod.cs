@@ -10,6 +10,7 @@ using Nop.Services.Plugins;
 using Nop.Services.Shipping;
 using Nop.Data;
 using Nop.Services.Shipping.Tracking;
+using Nop.Plugin.Shipping.DPD.Infrastructure;
 
 namespace Nop.Plugin.Shipping.DPD
 {
@@ -97,7 +98,7 @@ namespace Nop.Plugin.Shipping.DPD
                 CargoRegistered = false,
                 ServiceCodesOffered = "[NDY:CUR:CMS:PCL:ECN]",
                 ServiceVariantsOffered = "[TT:TD]",
-                CitiesApiUrl = @"http://web-api.online/api/AllCities?text="
+                CitiesApiUrl = PluginDefaults.DefaultCitiesApiUrl
             });
 
             //all locales
