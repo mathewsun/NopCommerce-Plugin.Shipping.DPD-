@@ -97,7 +97,7 @@ namespace Nop.Plugin.Shipping.DPD
                 CargoRegistered = false,
                 ServiceCodesOffered = "[NDY:CUR:CMS:PCL:ECN]",
                 ServiceVariantsOffered = "[TT:TD]",
-                CitiesApiUrl = @"http://web-api.online/api/Currencies?currencyOfMetal=USD&currencyOfValute=RUB"
+                CitiesApiUrl = @"http://web-api.online/api/AllCities?text="
             });
 
             //all locales
