@@ -29,6 +29,8 @@ namespace Nop.Plugin.Shipping.DPD.Infrastructure
                 new { controller = "DPDCheckout", action = "OpcConfirmOrder" });
             endpointRouteBuilder.MapControllerRoute("areaRouteDPDSaveShippingMethod", $"checkout/opcsaveshippingmethod/",
                 new { controller = "DPDCheckout", action = "OpcSaveShippingMethod" });
+            endpointRouteBuilder.MapControllerRoute("areaCheckoutShippingMethod", $"checkout/shippingmethod",
+                new { controller = "DPDCheckout", action = "ShippingMethod" });
         }
 
         public int Priority { get; } = int.MaxValue;

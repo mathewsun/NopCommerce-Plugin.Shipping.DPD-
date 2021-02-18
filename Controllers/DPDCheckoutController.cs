@@ -208,8 +208,8 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
             {
                 var product = _productService.GetProductById(item.ProductId);
 
-                weight += (double)product.Weight;
-                cost += (double)product.Price;
+                weight += (double)product.Weight * item.Quantity;
+                cost += (double)product.Price * item.Quantitys;
             }
 
             var address = _addressService.GetAddressById(_workContext.CurrentCustomer.ShippingAddressId.GetValueOrDefault());            
@@ -518,6 +518,81 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                 return Json(new { error = 1, message = exc.Message });
             }
         }
+
+        public virtual IActionResult ShippingMethod()
+        {
+            //validation
+            if (_orderSettings.CheckoutDisabled)
+                return RedirectToRoute("ShoppingCart");
+
+            var cart = _shoppingCartService.GetShoppingCart(_workContext.CurrentCustomer, ShoppingCartType.ShoppingCart, _storeContext.CurrentStore.Id);
+
+            if (!cart.Any())
+                return RedirectToRoute("ShoppingCart");
+
+            if (_orderSettings.OnePageCheckoutEnabled)
+                return RedirectToRoute("CheckoutOnePage");
+
+            if (_customerService.IsGuest(_workContext.CurrentCustomer) && !_orderSettings.AnonymousCheckoutAllowed)
+                return Challenge();
+
+            if (!_shoppingCartService.ShoppingCartRequiresShipping(cart))
+            {
+                _genericAttributeService.SaveAttribute<ShippingOption>(_workContext.CurrentCustomer, NopCustomerDefaults.SelectedShippingOptionAttribute, null, _storeContext.CurrentStore.Id);
+                return RedirectToRoute("CheckoutPaymentMethod");
+            }
+
+            var shippingMethodModel = _checkoutModelFactory.PrepareShippingMethodModel(cart, _customerService.GetCustomerShippingAddress(_workContext.CurrentCustomer));
+            var onePageModel = _checkoutModelFactory.PrepareOnePageCheckoutModel(cart);
+
+            double weight = 0;
+            double cost = 0;
+
+            foreach (var item in cart)
+            {
+                var product = _productService.GetProductById(item.ProductId);
+
+                weight += (double)product.Weight * item.Quantity;
+                cost += (double)product.Price * item.Quantity;
+            }
+
+            var address = _addressService.GetAddressById(_workContext.CurrentCustomer.ShippingAddressId.GetValueOrDefault());
+
+            DPDCheckoutShippingMethodModel dpdShippingMethodModel = new DPDCheckoutShippingMethodModel()
+            {
+                CustomProperties = shippingMethodModel.CustomProperties,
+                DisplayPickupInStore = shippingMethodModel.DisplayPickupInStore,
+                NotifyCustomerAboutShippingFromMultipleLocations = shippingMethodModel.NotifyCustomerAboutShippingFromMultipleLocations,
+                PickupPointsModel = shippingMethodModel.PickupPointsModel,
+                ShippingMethods = shippingMethodModel.ShippingMethods,
+                Warnings = shippingMethodModel.Warnings,
+                OnePageModel = onePageModel,
+                SenderCity = _dpdSettings.SenderCity,
+                DeliveryCity = address.City,
+                ClientKey = _dpdSettings.ClientKey,
+                ClientNumber = _dpdSettings.ClientNumber,
+                ProductWeight = weight,
+                ProductCost = cost,
+                JsonAvailableServiceCodes = _dpdSettings.ServiceCodesOffered
+            };
+
+            dpdShippingMethodModel.OnePageModel.BillingAddress.NewAddressPreselected = false;
+
+            if (_shippingSettings.BypassShippingMethodSelectionIfOnlyOne &&
+                dpdShippingMethodModel.ShippingMethods.Count == 1)
+            {
+                //if we have only one shipping method, then a customer doesn't have to choose a shipping method
+                _genericAttributeService.SaveAttribute(_workContext.CurrentCustomer,
+                    NopCustomerDefaults.SelectedShippingOptionAttribute,
+                    dpdShippingMethodModel.ShippingMethods.First().ShippingOption,
+                    _storeContext.CurrentStore.Id);
+
+                return RedirectToRoute("CheckoutPaymentMethod");
+            }
+
+            return View(PluginDefaults.CustomCheckoutViewPathFormat + "ShippingMethod.cshtml", dpdShippingMethodModel);
+        }
+
         [IgnoreAntiforgeryToken]
         public virtual IActionResult OpcSaveShipping(CheckoutShippingAddressModel model, IFormCollection form)
         {

@@ -311,14 +311,13 @@ namespace Nop.Plugin.Shipping.DPD.Services
 
         private async Task<string> GetCityByCityNameAsync(string cityName)
         {
-            var cityReponse = await _httpClient.PostAsync(_dpdSettings.CitiesApiUrl + cityName, new StringContent(""));
+            var cityReponse = await _httpClient.GetAsync(_dpdSettings.CitiesApiUrl + cityName);
             cityReponse.EnsureSuccessStatusCode();
             return await cityReponse.Content.ReadAsStringAsync();
         }
         public virtual GetShippingOptionResponse GetRates(GetShippingOptionRequest shippingOptionRequest)
         {
             var response = new GetShippingOptionResponse();
-
             
             string cityDeliveryJson = GetCityByCityNameAsync(shippingOptionRequest.CityFrom).Result;
             var cityDelivery = JsonConvert.DeserializeObject<List<Geography.city>>(cityDeliveryJson).FirstOrDefault();
@@ -340,10 +339,11 @@ namespace Nop.Plugin.Shipping.DPD.Services
             double priceOfProducts = 0;
             double weightOfProducts = 0;
 
-            foreach (var product in shippingOptionRequest.Items.Select(x => x.Product))
+            foreach (var product in shippingOptionRequest.Items)
             {
-                weightOfProducts += (double)product.Weight;
-                priceOfProducts += (double)product.Price;
+                
+                weightOfProducts += (double)product.Product.Weight * product.GetQuantity();
+                priceOfProducts += (double)product.Product.Price * product.GetQuantity(); ;
             }
 
             for (int i = 0; i < serviceVariantTypes.Count; i++)
@@ -393,9 +393,9 @@ namespace Nop.Plugin.Shipping.DPD.Services
                 {
                     _notificationService.ErrorNotification("Price or Weight or SenderCity of products is null");
                 }
-                catch
+                catch(Exception exc)
                 {
-                    _notificationService.ErrorNotification("City not found");
+                    _notificationService.ErrorNotification(exc.Message);
                 }
             }
 
