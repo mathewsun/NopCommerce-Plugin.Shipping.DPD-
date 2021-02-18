@@ -209,7 +209,7 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                 var product = _productService.GetProductById(item.ProductId);
 
                 weight += (double)product.Weight * item.Quantity;
-                cost += (double)product.Price * item.Quantitys;
+                cost += (double)product.Price * item.Quantity;
             }
 
             var address = _addressService.GetAddressById(_workContext.CurrentCustomer.ShippingAddressId.GetValueOrDefault());            
