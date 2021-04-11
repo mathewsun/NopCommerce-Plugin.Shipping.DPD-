@@ -14,7 +14,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class WSFault
     {
         
@@ -54,7 +54,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdInvoiceFile
     {
         
@@ -78,7 +78,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class auth
     {
         
@@ -118,7 +118,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdGetInvoiceFile
     {
         
@@ -220,92 +220,92 @@ namespace SandboxOrder
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", ConfigurationName="SandboxOrder.DPDOrder")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", ConfigurationName="SandboxOrder.DPDOrder")]
     public interface DPDOrder
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getInvoiceFileRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getInvoiceFileResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getInvoiceFile/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getInvoiceFileRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getInvoiceFileResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getInvoiceFile/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.getInvoiceFileResponse> getInvoiceFileAsync(SandboxOrder.getInvoiceFileRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/addParcelsRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/addParcelsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/addParcels/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/addParcelsRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/addParcelsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/addParcels/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.addParcelsResponse> addParcelsAsync(SandboxOrder.addParcelsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/removeParcelsRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/removeParcelsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/removeParcels/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/removeParcelsRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/removeParcelsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/removeParcels/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.removeParcelsResponse> removeParcelsAsync(SandboxOrder.removeParcelsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddress/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddress/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.createAddressResponse> createAddressAsync(SandboxOrder.createAddressRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddress/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddress/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.updateAddressResponse> updateAddressAsync(SandboxOrder.updateAddressRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getRegisterFileRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getRegisterFileResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getRegisterFile/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getRegisterFileRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getRegisterFileResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getRegisterFile/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.getRegisterFileResponse> getRegisterFileAsync(SandboxOrder.getRegisterFileRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/addAirwayBillRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/addAirwayBillResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/addAirwayBill/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/addAirwayBillRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/addAirwayBillResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/addAirwayBill/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.addAirwayBillResponse> addAirwayBillAsync(SandboxOrder.addAirwayBillRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/cancelOrderRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/cancelOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/cancelOrder/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/cancelOrderRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/cancelOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/cancelOrder/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.cancelOrderResponse> cancelOrderAsync(SandboxOrder.cancelOrderRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderStatusRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderStatus/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderStatusRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderStatusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderStatus/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.getOrderStatusResponse> getOrderStatusAsync(SandboxOrder.getOrderStatusRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressScheduleRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressScheduleResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressSchedule/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressScheduleRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressScheduleResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createAddressSchedule/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.createAddressScheduleResponse> createAddressScheduleAsync(SandboxOrder.createAddressScheduleRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/orderReDirectRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/orderReDirectResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/orderReDirect/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/orderReDirectRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/orderReDirectResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/orderReDirect/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.orderReDirectResponse> orderReDirectAsync(SandboxOrder.orderReDirectRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeUnitLoadRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeUnitLoadResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeUnitLoad/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeUnitLoadRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeUnitLoadResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeUnitLoad/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.changeUnitLoadResponse> changeUnitLoadAsync(SandboxOrder.changeUnitLoadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeDeliveryDateRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeDeliveryDateResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeDeliveryDate/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeDeliveryDateRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeDeliveryDateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/changeDeliveryDate/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.changeDeliveryDateResponse> changeDeliveryDateAsync(SandboxOrder.changeDeliveryDateRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderSMSRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderSMSResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderSMS/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderSMSRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderSMSResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/getOrderSMS/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.getOrderSMSResponse> getOrderSMSAsync(SandboxOrder.getOrderSMSRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/registerParcelsForTripRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/registerParcelsForTripResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/registerParcelsForTrip/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/registerParcelsForTripRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/registerParcelsForTripResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/registerParcelsForTrip/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.registerParcelsForTripResponse> registerParcelsForTripAsync(SandboxOrder.registerParcelsForTripRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressScheduleRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressScheduleResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressSchedule/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressScheduleRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressScheduleResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/updateAddressSchedule/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.updateAddressScheduleResponse> updateAddressScheduleAsync(SandboxOrder.updateAddressScheduleRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createOrderRequest", ReplyAction="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createOrderResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="http://dpd.ru/ws/order2/2012-04-04/DPDOrder/createOrder/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createOrderRequest", ReplyAction="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SandboxOrder.WSFault), Action="https://dpd.ru/ws/order2/2012-04-04/DPDOrder/createOrder/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<SandboxOrder.createOrderResponse> createOrderAsync(SandboxOrder.createOrderRequest request);
     }
@@ -313,11 +313,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getInvoiceFile", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getInvoiceFile", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getInvoiceFileRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdGetInvoiceFile request;
         
@@ -334,11 +334,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getInvoiceFileResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getInvoiceFileResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getInvoiceFileResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdInvoiceFile @return;
         
@@ -355,7 +355,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrderCorrection
     {
         
@@ -571,7 +571,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class parcel
     {
         
@@ -883,7 +883,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrderCorrectionStatus
     {
         
@@ -955,7 +955,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class parcelStatus
     {
         
@@ -1011,11 +1011,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="addParcels", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addParcels", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class addParcelsRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderCorrection parcels;
         
@@ -1032,11 +1032,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="addParcelsResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addParcelsResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class addParcelsResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderCorrectionStatus @return;
         
@@ -1053,11 +1053,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="removeParcels", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="removeParcels", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class removeParcelsRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderCorrection parcels;
         
@@ -1074,11 +1074,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="removeParcelsResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="removeParcelsResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class removeParcelsResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderCorrectionStatus @return;
         
@@ -1095,7 +1095,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdClientAddress
     {
         
@@ -1135,7 +1135,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class clientAddress
     {
         
@@ -1559,7 +1559,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdClientAddressStatus
     {
         
@@ -1615,11 +1615,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddress", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddress", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class createAddressRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddress address;
         
@@ -1636,11 +1636,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddressResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddressResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class createAddressResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddressStatus @return;
         
@@ -1657,11 +1657,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddress", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddress", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class updateAddressRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddress address;
         
@@ -1678,11 +1678,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddressResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddressResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class updateAddressResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddressStatus @return;
         
@@ -1699,7 +1699,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdGetRegisterFile
     {
         
@@ -1803,11 +1803,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getRegisterFile", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getRegisterFile", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getRegisterFileRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdGetRegisterFile request;
         
@@ -1824,11 +1824,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getRegisterFileResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getRegisterFileResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getRegisterFileResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         [System.Xml.Serialization.XmlArrayItemAttribute("file", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
         public byte[][] @return;
@@ -1846,7 +1846,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdAirwayBillInput
     {
         
@@ -1886,7 +1886,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class orderAirbillInput
     {
         
@@ -1942,7 +1942,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class paramAirbill
     {
         
@@ -1982,7 +1982,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class orderAirbillOutput
     {
         
@@ -2054,11 +2054,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="addAirwayBill", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addAirwayBill", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class addAirwayBillRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdAirwayBillInput request;
         
@@ -2075,11 +2075,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="addAirwayBillResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addAirwayBillResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class addAirwayBillResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         [System.Xml.Serialization.XmlArrayItemAttribute("order", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public SandboxOrder.orderAirbillOutput[] @return;
@@ -2097,7 +2097,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrderCancellation
     {
         
@@ -2137,7 +2137,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class orderCancel
     {
         
@@ -2209,7 +2209,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrderStatus
     {
         
@@ -2281,11 +2281,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelOrder", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelOrder", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class cancelOrderRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderCancellation orders;
         
@@ -2302,11 +2302,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelOrderResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelOrderResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class cancelOrderResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderStatus[] @return;
         
@@ -2323,7 +2323,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdGetOrderStatus
     {
         
@@ -2363,7 +2363,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class internalOrderNumber
     {
         
@@ -2419,11 +2419,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderStatus", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderStatus", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getOrderStatusRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdGetOrderStatus orderStatus;
         
@@ -2440,11 +2440,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderStatusResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderStatusResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getOrderStatusResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderStatus[] @return;
         
@@ -2461,7 +2461,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdClientAddressSchedule
     {
         
@@ -2518,7 +2518,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class clientWorkDay
     {
         
@@ -2606,11 +2606,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddressSchedule", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddressSchedule", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class createAddressScheduleRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddressSchedule address;
         
@@ -2627,11 +2627,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddressScheduleResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createAddressScheduleResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class createAddressScheduleResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddressStatus @return;
         
@@ -2648,7 +2648,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrdersReDirect
     {
         
@@ -2688,7 +2688,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class reDirectOrder
     {
         
@@ -2776,7 +2776,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrderResult
     {
         
@@ -2816,11 +2816,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="orderReDirect", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="orderReDirect", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class orderReDirectRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrdersReDirect orders;
         
@@ -2837,11 +2837,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="orderReDirectResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="orderReDirectResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class orderReDirectResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderResult[] @return;
         
@@ -2858,7 +2858,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdUnitLoadChange
     {
         
@@ -2898,7 +2898,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class orderUnitLoad
     {
         
@@ -3162,7 +3162,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class unitLoad
     {
         
@@ -3490,11 +3490,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="changeUnitLoad", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="changeUnitLoad", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class changeUnitLoadRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdUnitLoadChange request;
         
@@ -3511,11 +3511,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="changeUnitLoadResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="changeUnitLoadResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class changeUnitLoadResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderStatus[] @return;
         
@@ -3532,7 +3532,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdChangeDeliveryDate
     {
         
@@ -3572,7 +3572,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class orderDeliveryDate
     {
         
@@ -3612,11 +3612,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="changeDeliveryDate", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="changeDeliveryDate", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class changeDeliveryDateRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdChangeDeliveryDate request;
         
@@ -3633,11 +3633,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="changeDeliveryDateResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="changeDeliveryDateResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class changeDeliveryDateResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderStatus[] @return;
         
@@ -3654,7 +3654,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrderSmsRequest
     {
         
@@ -3694,7 +3694,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class orderNum
     {
         
@@ -3718,7 +3718,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrderSmsStatus
     {
         
@@ -3774,11 +3774,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderSMS", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderSMS", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getOrderSMSRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderSmsRequest request;
         
@@ -3795,11 +3795,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderSMSResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getOrderSMSResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class getOrderSMSResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         [System.Xml.Serialization.XmlArrayItemAttribute("order", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public SandboxOrder.dpdOrderSmsStatus[] @return;
@@ -3817,7 +3817,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdRegisterForTrip
     {
         
@@ -3889,7 +3889,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class tripShipment
     {
         
@@ -3929,7 +3929,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class tripPallet
     {
         
@@ -3969,7 +3969,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class tripParcel
     {
         
@@ -3993,7 +3993,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdRegisterForTripStatus
     {
         
@@ -4049,11 +4049,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registerParcelsForTrip", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registerParcelsForTrip", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class registerParcelsForTripRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdRegisterForTrip request;
         
@@ -4070,11 +4070,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registerParcelsForTripResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registerParcelsForTripResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class registerParcelsForTripResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdRegisterForTripStatus @return;
         
@@ -4091,11 +4091,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddressSchedule", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddressSchedule", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class updateAddressScheduleRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddressSchedule address;
         
@@ -4112,11 +4112,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddressScheduleResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAddressScheduleResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class updateAddressScheduleResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdClientAddressStatus @return;
         
@@ -4133,7 +4133,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dpdOrdersData
     {
         
@@ -4189,7 +4189,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class header
     {
         
@@ -4293,7 +4293,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class address
     {
         
@@ -4733,7 +4733,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class order
     {
         
@@ -5077,7 +5077,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class parameter
     {
         
@@ -5117,7 +5117,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class dataInternational
     {
         
@@ -5157,7 +5157,7 @@ namespace SandboxOrder
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04")]
     public partial class extraService
     {
         
@@ -5197,11 +5197,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="createOrder", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createOrder", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class createOrderRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrdersData orders;
         
@@ -5218,11 +5218,11 @@ namespace SandboxOrder
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="createOrderResponse", WrapperNamespace="http://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createOrderResponse", WrapperNamespace="https://dpd.ru/ws/order2/2012-04-04", IsWrapped=true)]
     public partial class createOrderResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/order2/2012-04-04", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/order2/2012-04-04", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SandboxOrder.dpdOrderStatus[] @return;
         
@@ -5535,7 +5535,7 @@ namespace SandboxOrder
         {
             if ((endpointConfiguration == EndpointConfiguration.DPDOrderPort))
             {
-                return new System.ServiceModel.EndpointAddress("http://wstest.dpd.ru/services/order2");
+                return new System.ServiceModel.EndpointAddress("https://wstest.dpd.ru/services/order2");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

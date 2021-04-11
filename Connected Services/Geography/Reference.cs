@@ -14,7 +14,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class WSFault
     {
         
@@ -54,7 +54,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class possibleExtraService
     {
         
@@ -110,7 +110,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class dpdPossibleESResult
     {
         
@@ -166,7 +166,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class dpdPossibleESPickupDelivery
     {
         
@@ -302,7 +302,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class auth
     {
         
@@ -342,7 +342,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class dpdPossibleESRequest
     {
         
@@ -493,40 +493,40 @@ namespace Geography
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", ConfigurationName="Geography.DPDGeography2")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", ConfigurationName="Geography.DPDGeography2")]
     public interface DPDGeography2
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getPossibleExtraServiceReques" +
-            "t", ReplyAction="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getPossibleExtraServiceRespon" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getPossibleExtraServiceReques" +
+            "t", ReplyAction="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getPossibleExtraServiceRespon" +
             "se")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getPossibleExtraService/Fault" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getPossibleExtraService/Fault" +
             "/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Geography.getPossibleExtraServiceResponse> getPossibleExtraServiceAsync(Geography.getPossibleExtraServiceRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getTerminalsSelfDelivery2Requ" +
-            "est", ReplyAction="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getTerminalsSelfDelivery2Resp" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getTerminalsSelfDelivery2Requ" +
+            "est", ReplyAction="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getTerminalsSelfDelivery2Resp" +
             "onse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getTerminalsSelfDelivery2/Fau" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getTerminalsSelfDelivery2/Fau" +
             "lt/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Geography.getTerminalsSelfDelivery2Response> getTerminalsSelfDelivery2Async(Geography.getTerminalsSelfDelivery2Request request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getStoragePeriodRequest", ReplyAction="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getStoragePeriodResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getStoragePeriod/Fault/WSFaul" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getStoragePeriodRequest", ReplyAction="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getStoragePeriodResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getStoragePeriod/Fault/WSFaul" +
             "t", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Geography.getStoragePeriodResponse> getStoragePeriodAsync(Geography.getStoragePeriodRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getCitiesCashPayRequest", ReplyAction="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getCitiesCashPayResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getCitiesCashPay/Fault/WSFaul" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getCitiesCashPayRequest", ReplyAction="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getCitiesCashPayResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getCitiesCashPay/Fault/WSFaul" +
             "t", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Geography.getCitiesCashPayResponse> getCitiesCashPayAsync(Geography.getCitiesCashPayRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getParcelShopsRequest", ReplyAction="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getParcelShopsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="http://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getParcelShops/Fault/WSFault", Name="WSFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getParcelShopsRequest", ReplyAction="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getParcelShopsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Geography.WSFault), Action="https://dpd.ru/ws/geography/2015-05-20/DPDGeography2/getParcelShops/Fault/WSFault", Name="WSFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Geography.getParcelShopsResponse> getParcelShopsAsync(Geography.getParcelShopsRequest request);
     }
@@ -534,11 +534,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getPossibleExtraService", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPossibleExtraService", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getPossibleExtraServiceRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.dpdPossibleESRequest request;
         
@@ -555,11 +555,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getPossibleExtraServiceResponse", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPossibleExtraServiceResponse", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getPossibleExtraServiceResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.dpdPossibleESResult @return;
         
@@ -576,7 +576,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class terminalSelf
     {
         
@@ -697,7 +697,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class address
     {
         
@@ -945,7 +945,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class geoCoordinates
     {
         
@@ -1017,7 +1017,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class schedule
     {
         
@@ -1057,7 +1057,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class timetable
     {
         
@@ -1097,7 +1097,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class extraService
     {
         
@@ -1137,7 +1137,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class extraServiceParam
     {
         
@@ -1177,11 +1177,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getTerminalsSelfDelivery2", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getTerminalsSelfDelivery2", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getTerminalsSelfDelivery2Request
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.auth auth;
         
@@ -1198,11 +1198,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getTerminalsSelfDelivery2Response", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getTerminalsSelfDelivery2Response", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getTerminalsSelfDelivery2Response
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         [System.Xml.Serialization.XmlArrayItemAttribute("terminal", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.terminalSelf[] @return;
@@ -1220,7 +1220,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class storagePeriodRequest
     {
         
@@ -1276,7 +1276,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class terminalStoragePeriods
     {
         
@@ -1316,7 +1316,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class storagePeriod
     {
         
@@ -1356,11 +1356,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStoragePeriod", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getStoragePeriod", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getStoragePeriodRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.storagePeriodRequest request;
         
@@ -1377,11 +1377,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStoragePeriodResponse", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getStoragePeriodResponse", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getStoragePeriodResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         [System.Xml.Serialization.XmlArrayItemAttribute("terminal", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.terminalStoragePeriods[] @return;
@@ -1399,7 +1399,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class dpdCitiesCashPayRequest
     {
         
@@ -1439,7 +1439,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class city
     {
         
@@ -1639,11 +1639,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCitiesCashPay", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCitiesCashPay", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getCitiesCashPayRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.dpdCitiesCashPayRequest request;
         
@@ -1660,11 +1660,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCitiesCashPayResponse", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCitiesCashPayResponse", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getCitiesCashPayResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.city[] @return;
         
@@ -1681,7 +1681,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class dpdParcelShopRequest
     {
         
@@ -1769,7 +1769,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class parcelShop
     {
         
@@ -1970,7 +1970,7 @@ namespace Geography
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20")]
     public partial class limits
     {
         
@@ -2170,11 +2170,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getParcelShops", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getParcelShops", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getParcelShopsRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.dpdParcelShopRequest request;
         
@@ -2191,11 +2191,11 @@ namespace Geography
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getParcelShopsResponse", WrapperNamespace="http://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getParcelShopsResponse", WrapperNamespace="https://dpd.ru/ws/geography/2015-05-20", IsWrapped=true)]
     public partial class getParcelShopsResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/geography/2015-05-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/geography/2015-05-20", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Geography.parcelShop[] @return;
@@ -2353,7 +2353,7 @@ namespace Geography
         {
             if ((endpointConfiguration == EndpointConfiguration.DPDGeography2Port))
             {
-                return new System.ServiceModel.EndpointAddress("http://ws.dpd.ru/services/geography2");
+                return new System.ServiceModel.EndpointAddress("https://ws.dpd.ru/services/geography2");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
