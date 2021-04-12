@@ -3,7 +3,7 @@
   "Version": "15.0.40203.910",
   "ExtendedData": {
     "inputs": [
-      "http://ws.dpd.ru/services/geography2?wsdl"
+      "https://ws.dpd.ru/services/geography2?wsdl"
     ],
     "collectionTypes": [
       "System.Array",
@@ -148,7 +148,6 @@
       "System.Net.WebHeaderCollection, {System.Net.WebHeaderCollection, 4.3.0}",
       "System.ObjectModel, {System.ObjectModel, 4.3.0}",
       "System.Reflection, {System.Reflection, 4.3.0}",
-      "System.Reflection.DispatchProxy, {System.Reflection.DispatchProxy, 4.5.0}",
       "System.Reflection.Emit, {System.Reflection.Emit, 4.3.0}",
       "System.Reflection.Emit.ILGeneration, {System.Reflection.Emit.ILGeneration, 4.3.0}",
       "System.Reflection.Emit.Lightweight, {System.Reflection.Emit.Lightweight, 4.3.0}",
@@ -175,9 +174,12 @@
       "System.Security.Principal, {System.Security.Principal, 4.3.0}",
       "System.Security.Principal.Windows, {System.Security.Principal.Windows, 4.7.0}",
       "System.Security.SecureString, {System.Security.SecureString, 4.3.0}",
-      "System.ServiceModel, {System.ServiceModel.Primitives, 4.7.0}",
-      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.7.0}",
-      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.7.0}",
+      "System.ServiceModel, {System.ServiceModel.Primitives, 4.4.4}",
+      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.4.4}",
+      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.4.4}",
+      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.4.4}",
+      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.4.4}",
+      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.4.4}",
       "System.Spatial, {System.Spatial, 5.8.4}",
       "System.Text.Encoding, {System.Text.Encoding, 4.3.0}",
       "System.Text.Encoding.CodePages, {System.Text.Encoding.CodePages, 4.7.0}",
