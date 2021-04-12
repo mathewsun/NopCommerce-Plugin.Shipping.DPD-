@@ -6,7 +6,7 @@
   },
   "ExtendedData": {
     "inputs": [
-      "https://ws.dpd.ru/services/calculator2?wsdl"
+      "http://ws.dpd.ru/services/calculator2?wsdl"
     ],
     "collectionTypes": [
       "System.Array",

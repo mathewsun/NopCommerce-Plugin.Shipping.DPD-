@@ -14,7 +14,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class ServiceCostFault
     {
         
@@ -86,7 +86,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class city
     {
         
@@ -222,7 +222,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class serviceCost
     {
         
@@ -326,7 +326,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class parcelRequest
     {
         
@@ -420,7 +420,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class cityRequest
     {
         
@@ -540,7 +540,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class auth
     {
         
@@ -580,7 +580,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class serviceCostParcelsRequest
     {
         
@@ -828,7 +828,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class ServiceCostFault2
     {
         
@@ -900,7 +900,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class cityIndex
     {
         
@@ -1098,42 +1098,42 @@ namespace Calculator
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", ConfigurationName="Calculator.DPDCalculator")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", ConfigurationName="Calculator.DPDCalculator")]
     public interface DPDCalculator
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcelsReque" +
-            "st", ReplyAction="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcelsRespo" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcelsReque" +
+            "st", ReplyAction="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcelsRespo" +
             "nse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault), Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels/Faul" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault), Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels/Faul" +
             "t/ServiceCostFault", Name="ServiceCostFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Calculator.getServiceCostByParcelsResponse> getServiceCostByParcelsAsync(Calculator.getServiceCostByParcelsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels2Requ" +
-            "est", ReplyAction="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels2Resp" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels2Requ" +
+            "est", ReplyAction="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels2Resp" +
             "onse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault2), Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels2/Fau" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault2), Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostByParcels2/Fau" +
             "lt/ServiceCostFault2", Name="ServiceCostFault2")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Calculator.getServiceCostByParcels2Response> getServiceCostByParcels2Async(Calculator.getServiceCostByParcels2Request request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost2Request", ReplyAction="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost2Response")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault2), Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost2/Fault/Servic" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost2Request", ReplyAction="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost2Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault2), Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost2/Fault/Servic" +
             "eCostFault2", Name="ServiceCostFault2")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Calculator.getServiceCost2Response> getServiceCost2Async(Calculator.getServiceCost2Request request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostRequest", ReplyAction="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault), Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost/Fault/Service" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostRequest", ReplyAction="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault), Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCost/Fault/Service" +
             "CostFault", Name="ServiceCostFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Calculator.getServiceCostResponse> getServiceCostAsync(Calculator.getServiceCostRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostInternationalR" +
-            "equest", ReplyAction="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostInternationalR" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostInternationalR" +
+            "equest", ReplyAction="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostInternationalR" +
             "esponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault), Action="https://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostInternational/" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Calculator.ServiceCostFault), Action="http://dpd.ru/ws/calculator/2012-03-20/DPDCalculator/getServiceCostInternational/" +
             "Fault/ServiceCostFault", Name="ServiceCostFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Threading.Tasks.Task<Calculator.getServiceCostInternationalResponse> getServiceCostInternationalAsync(Calculator.getServiceCostInternationalRequest request);
@@ -1142,11 +1142,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcels", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcels", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostByParcelsRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCostParcelsRequest request;
         
@@ -1163,11 +1163,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcelsResponse", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcelsResponse", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostByParcelsResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCost[] @return;
         
@@ -1184,11 +1184,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcels2", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcels2", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostByParcels2Request
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCostParcelsRequest request;
         
@@ -1205,11 +1205,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcels2Response", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostByParcels2Response", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostByParcels2Response
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCost[] @return;
         
@@ -1226,7 +1226,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class serviceCostRequest
     {
         
@@ -1506,11 +1506,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCost2", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCost2", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCost2Request
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCostRequest request;
         
@@ -1527,11 +1527,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCost2Response", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCost2Response", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCost2Response
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCost[] @return;
         
@@ -1548,11 +1548,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCost", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCost", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCostRequest request;
         
@@ -1569,11 +1569,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostResponse", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostResponse", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCost[] @return;
         
@@ -1590,7 +1590,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class serviceCostInternationalRequest
     {
         
@@ -1806,7 +1806,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class cityInternationalRequest
     {
         
@@ -1878,7 +1878,7 @@ namespace Calculator
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20")]
     public partial class serviceCostInternational
     {
         
@@ -2062,11 +2062,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostInternational", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostInternational", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostInternationalRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCostInternationalRequest request;
         
@@ -2083,11 +2083,11 @@ namespace Calculator
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostInternationalResponse", WrapperNamespace="https://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getServiceCostInternationalResponse", WrapperNamespace="http://dpd.ru/ws/calculator/2012-03-20", IsWrapped=true)]
     public partial class getServiceCostInternationalResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://dpd.ru/ws/calculator/2012-03-20", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://dpd.ru/ws/calculator/2012-03-20", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Calculator.serviceCostInternational[] @return;
         
@@ -2244,7 +2244,7 @@ namespace Calculator
         {
             if ((endpointConfiguration == EndpointConfiguration.DPDCalculatorPort))
             {
-                return new System.ServiceModel.EndpointAddress("https://ws.dpd.ru/services/calculator2");
+                return new System.ServiceModel.EndpointAddress("http://ws.dpd.ru/services/calculator2");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
