@@ -3,7 +3,7 @@
   "Version": "15.0.40203.910",
   "ExtendedData": {
     "inputs": [
-      "https://wstest.dpd.ru/services/order2?wsdl"
+      "http://wstest.dpd.ru/services/order2?wsdl"
     ],
     "collectionTypes": [
       "System.Array",
