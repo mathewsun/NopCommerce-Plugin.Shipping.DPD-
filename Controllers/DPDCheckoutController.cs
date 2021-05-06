@@ -848,8 +848,6 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
 
                 List<string> productsCategories = new List<string>();
 
-                dpdPickupPointAddress.CartItemsCost = 50000;
-
                 foreach (var productId in cart.Select(x => x.ProductId))
                 {
                     var product = _productService.GetProductById(productId);
