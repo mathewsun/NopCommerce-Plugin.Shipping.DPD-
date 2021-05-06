@@ -846,6 +846,11 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
 
                 var dpdPickupPointAddress = dpdPickupPointAddresses.ToList().LastOrDefault(x => x.UserId == _workContext.CurrentCustomer.Id);
 
+                if(dpdPickupPointAddress == null)
+                {
+                    dpdPickupPointAddress = new PickupPointAddress();
+                }
+
                 List<string> productsCategories = new List<string>();
 
                 foreach (var productId in cart.Select(x => x.ProductId))
@@ -869,10 +874,18 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                     uniqueCategoryNamesString = string.Join(", ", productsCategories.Distinct());
                 }
                  
-
+                
                 dpdPickupPointAddress.Category = uniqueCategoryNamesString;
 
-                _dpdPickupPointAddressRepository.Update(dpdPickupPointAddress);
+                if(dpdPickupPointAddress.UserId == null)
+                {
+                    dpdPickupPointAddress.UserId = _workContext.CurrentCustomer.Id;
+                    _dpdPickupPointAddressRepository.Insert(dpdPickupPointAddress);
+                }
+                else
+                {
+                    _dpdPickupPointAddressRepository.Update(dpdPickupPointAddress);
+                }                
 
                 if (!_orderSettings.OnePageCheckoutEnabled)
                     throw new Exception("One page checkout is disabled");
