@@ -876,8 +876,8 @@ namespace Nop.Plugin.Shipping.DPD.Controllers
                  
                 
                 dpdPickupPointAddress.Category = uniqueCategoryNamesString;
-
-                if(dpdPickupPointAddress.UserId == null)
+                
+                if(dpdPickupPointAddress.UserId != 0)
                 {
                     dpdPickupPointAddress.UserId = _workContext.CurrentCustomer.Id;
                     _dpdPickupPointAddressRepository.Insert(dpdPickupPointAddress);
